@@ -29,7 +29,7 @@ public:
 	AS5048B();
 	void set_home();
 	float get_angle();
-private:
+protected:
 	static const uint8_t reg_angle_addr = 0xFE;
 	static const float rad_per_cnt;
 	I2CDevice i2c;
