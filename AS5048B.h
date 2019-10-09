@@ -16,7 +16,6 @@
  * References:
  * - Datasheet: https://www.mouser.com/ds/2/588/AS5048_DS000298_3-00-522551.pdf
  */
-
 #pragma once
 #include <I2CDevice.h>
 
