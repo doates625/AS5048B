@@ -3,9 +3,9 @@
  * @brief Class for interfacing with AS5048B 14-bit I2C encoder.
  * @author Dan Oates (WPI Class of 2020)
  * 
- * The AS5048B is a 14-bit encoder which supports both I2C and
- * quadrature output. This class provides a simple interface for
- * reading the angle and calibrating a home (zero) angle.
+ * The AS5048B is a 14-bit encoder which supports I2C and quadrature output.
+ * This class provides a simple I2C interface for reading the angle and
+ * calibrating a home (zero) angle.
  * 
  * Dependencies:
  * - I2CDevice: https://github.com/doates625/I2CDevice.git
