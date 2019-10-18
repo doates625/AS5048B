@@ -1,6 +1,6 @@
 /**
  * @file AS5048B.h
- * @brief Class for interfacing with AS5048B 14-bit I2C encoder.
+ * @brief Class for interfacing with AS5048B 14-bit I2C encoder
  * @author Dan Oates (WPI Class of 2020)
  * 
  * The AS5048B is a 14-bit encoder which supports I2C and quadrature output.
