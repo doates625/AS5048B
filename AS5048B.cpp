@@ -4,7 +4,6 @@
  */
 #include "AS5048B.h"
 #include <CppUtil.h>
-#include <math.h>
 
 /**
  * Static Constants
@@ -56,6 +55,6 @@ float AS5048B::get_angle()
 
 	// Convert to float and wrap to [-pi, pi]
 	float angle = angle_raw * rad_per_cnt;
-	angle = mod_limit(angle - home_angle, -M_PI, +M_PI);
+	angle = Util::wrap(angle - home_angle, -M_PI, +M_PI);
 	return angle;
 }
