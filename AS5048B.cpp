@@ -55,6 +55,6 @@ float AS5048B::get_angle()
 
 	// Convert to float and wrap to [-pi, pi]
 	float angle = angle_raw * rad_per_cnt;
-	angle = Util::wrap(angle - home_angle, -M_PI, +M_PI);
+	angle = CppUtil::wrap(angle - home_angle, -M_PI, +M_PI);
 	return angle;
 }
