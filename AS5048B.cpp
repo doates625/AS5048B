@@ -19,7 +19,7 @@ const float AS5048B::rad_per_cnt = 2.0f * M_PI / 16384.0f;
 AS5048B::AS5048B(I2CDEVICE_I2C_CLASS* i2c, uint8_t i2c_addr, float home_angle)
 {
 	this->i2c = I2CDevice(i2c, i2c_addr, I2CDevice::msb_first);
-	this->home_angle = home_angle;
+	set_home(home_angle);
 }
 
 /**
@@ -30,7 +30,7 @@ AS5048B::AS5048B(I2CDEVICE_I2C_CLASS* i2c, uint8_t i2c_addr, float home_angle)
 AS5048B::AS5048B()
 {
 	this->i2c = I2CDevice();
-	this->home_angle = 0.0f;
+	set_home(0.0f);
 }
 
 /**
@@ -38,8 +38,16 @@ AS5048B::AS5048B()
  */
 void AS5048B::set_home()
 {
-	home_angle = 0.0f;
-	home_angle = get_angle();
+	set_home(0.0f);
+	set_home(get_angle());
+}
+
+/**
+ * @brief Sets home angle to given angle
+ */
+void AS5048B::set_home(float home_angle)
+{
+	this->home_angle = home_angle;
 }
 
 /**

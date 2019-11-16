@@ -15,6 +15,7 @@ public:
 		float home_angle = 0.0f);
 	AS5048B();
 	void set_home();
+	void set_home(float home_angle);
 	float get_angle();
 protected:
 	static const uint8_t reg_angle_addr = 0xFE;
