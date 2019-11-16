@@ -10,10 +10,9 @@ class AS5048B
 {
 public:
 	AS5048B(
-		I2CDEVICE_I2C_CLASS* i2c,
+		I2CDevice::i2c_t* i2c,
 		uint8_t i2c_addr = 0x40,
 		float home_angle = 0.0f);
-	AS5048B();
 	void set_home();
 	void set_home(float home_angle);
 	float get_angle();
@@ -22,4 +21,7 @@ protected:
 	static const float rad_per_cnt;
 	I2CDevice i2c;
 	float home_angle;
+private:
+	AS5048B(const AS5048B&);
+	AS5048B& operator=(const AS5048B&);
 };
