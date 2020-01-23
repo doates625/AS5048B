@@ -23,6 +23,17 @@ AS5048B::AS5048B(I2CDevice::i2c_t* i2c, uint8_t i2c_addr, float home_angle) :
 }
 
 /**
+ * @brief Checks I2C connection
+ * @return True if successful I2C read occured
+ */
+bool AS5048B::init()
+{
+	i2c.get_seq(reg_agc_addr, 1);
+	uint8_t agc_reg = (uint8_t)i2c;
+	return (agc_reg != 0xFF);
+}
+
+/**
  * @brief Sets home angle to current angle.
  */
 void AS5048B::set_home()

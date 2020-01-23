@@ -13,11 +13,13 @@ public:
 		I2CDevice::i2c_t* i2c,
 		uint8_t i2c_addr = 0x40,
 		float home_angle = 0.0f);
+	bool init();
 	void set_home();
 	void set_home(float home_angle);
 	float get_angle();
 protected:
 	static const uint8_t reg_angle_addr = 0xFE;
+	static const uint8_t reg_agc_addr = 0xFA;
 	static const float rad_per_cnt;
 	I2CDevice i2c;
 	float home_angle;
