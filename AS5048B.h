@@ -27,3 +27,4 @@ private:
 	AS5048B(const AS5048B&);
 	AS5048B& operator=(const AS5048B&);
 };
+

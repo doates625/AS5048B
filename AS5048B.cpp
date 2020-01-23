@@ -66,3 +66,4 @@ float AS5048B::get_angle()
 	angle = CppUtil::wrap(angle - home_angle, -M_PI, +M_PI);
 	return angle;
 }
+
